@@ -2,6 +2,7 @@
 
 
 <h2>启动流程</h2>
+
 1. 在db.properties中添加对应的mysql的驱动,账号,密码,数据库url,建对应的表
 2. 修改pom的mysql-connector-java(因为我本地是mysql8,使用5.7可以修改成5)
 3. 启动test中的demo即可
@@ -21,6 +22,7 @@
 
 
 <h2>代码执行流程</h2>
+
 * ①jdk自带动态代理生成Mapper接口的代理类,全部逻辑都实现在MapperHandler类
 * ②通过反射获取Method中的@Select,@Insert的信息
 * ③通过正则得到  <b>#{}</b> 的占位符, 将方法的参数名和sql中的占位符做关联,生成ParseResult实例,这个实例包含全部的占位符信息和具体值,并讲占位符都替换成统一的?号
@@ -36,6 +38,7 @@
 <hr>
 
 <h4>查询+查询结果<h4>
+
 ![Image text](./img/使用.png)
 ![Image text](./img/整体查询结果.png)
 
